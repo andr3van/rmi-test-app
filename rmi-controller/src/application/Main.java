@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import remoteinterface.RemoteInterface;
-import java.io.IOException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -76,7 +75,7 @@ public class Main  extends Application implements RemoteInterface {
         GuiController.instanceOf().getMsgStat().setText("Server ready...");
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         try {
             Main obj = new Main();
             int port = 1100;
