@@ -27,3 +27,10 @@ hs_err_pid*
 /out
 /target
 *.iml
+rmi-controller/.idea/
+
+rmi-main/.idea/
+
+rmi-main/out/production/Main/META-INF/
+
+rmi-controller/out/production/Controller/META-INF/
