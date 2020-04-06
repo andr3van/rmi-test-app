@@ -1,1 +1,2 @@
-rmi-test-app
+# Java Remote Method Invocation (Java RMI) test application
+A simple application that demonstrates Java RMI technological mechanism which can pass information and communicate between two application (server and client).
