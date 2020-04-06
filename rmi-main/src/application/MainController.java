@@ -30,14 +30,11 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         commands.setItems(observableArrayList("Say hi", "Ask name", "Ask age"));
 
-        commands.valueProperty().addListener((observable, oldValue, newValue) -> {
-            selectedCommand = newValue;
-        });
+        commands.valueProperty().addListener((observable, oldValue, newValue) -> selectedCommand = newValue);
     }
 
     @FXML
     void onConnect(ActionEvent event) {
-        String host = null;
         try {
             Registry registry = LocateRegistry.getRegistry(1100);
             stub = (RemoteInterface) registry.lookup("RemoteInterface");
@@ -95,6 +92,8 @@ public class MainController implements Initializable {
                     e.printStackTrace();
                 }
                 break;
+            default:
+                throw new AssertionError();
         }
     }
 
